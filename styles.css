@@ -1,0 +1,13 @@
+body {
+    background-color: lightskyblue;
+}
+.cadastro {
+    display: flex;
+    justify-content: center;
+    background-color: lightslategray;
+}
+
+.form {
+    display: flex;
+    
+}
