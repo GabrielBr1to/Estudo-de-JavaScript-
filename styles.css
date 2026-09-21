@@ -1,13 +1,17 @@
 body {
     background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
 }
 .cadastro {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     background-color: lightslategray;
 }
 
 .form {
-    display: flex;
+   
     
 }
+

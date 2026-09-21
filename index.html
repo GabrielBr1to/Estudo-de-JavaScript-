@@ -12,7 +12,7 @@
             <h1>Cadastro de funcionários</h1>
 
             <label>Nome:</label>
-            <input type="text" placeholder="Nome completo" minlength="15">
+            <input type="text" placeholder="Nome completo" minlength="15" onblur="">
 
            
                 <div class="sexo">
@@ -35,11 +35,13 @@
 
             <div class="Matricula">
                 <label>Matricula</label>
-                <input type="number" placeholder=" required" minlength="5">
+                <input type="number" placeholder="Matricula" minlength="5" required>
             </div>
 
             
         </form>
+
+        <button onclick="avisoEnvio()">Enviar!</button>
     </section>
 </body>
 <script src="function.js"></script>

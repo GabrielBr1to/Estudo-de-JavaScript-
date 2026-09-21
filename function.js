@@ -3,6 +3,6 @@
     return somaNumero;
 }*/
 
-function click() {
-    
+function avisoEnvio() {
+    document.getElementById("avisoEnvio"). textContent = "dados enviados com sucesso!"
 }
