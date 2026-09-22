@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Cadastro de Endereço</title> 
+ 
+    <style> 
+        body { 
+            font-family: Arial; 
+            padding: 20px; 
+        } 
+ 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+    <h1>Cadastro de Endereço</h1> 
+ 
+    <form> 
+ 
+        <label for="cep"> 
+            CEP 
+        </label> 
+ 
+        <input 
+            type="text" 
+            id="cep" 
+            placeholder="Digite o CEP" 
+        > 
+ 
+        <label for="logradouro"> 
+            Rua 
+        </label> 
+ 
+        <input 
+            type="text" 
+            id="logradouro" 
+        > 
+ 
+        <label for="numero"> 
+            Número 
+        </label> 
+ 
+        <input 
+            type="text" 
+            id="numero" 
+        > 
+ 
+        <label for="bairro"> 
+            Bairro 
+        </label> 
+ 
+        <input 
+            type="text" 
+            id="bairro" 
+        > 
+ 
+        <label for="cidade"> 
+            Cidade 
+        </label> 
+ 
+        <input 
+            type="text" 
+            id="cidade" 
+        > 
+ 
+        <label for="estado"> 
+            Estado 
+        </label> 
+ 
+        <input 
+            type="text" 
+            id="estado" 
+        > 
+ 
+        <button 
+            type="button" 
+            onclick="buscarCep()" 
+        > 
+            Buscar CEP 
+        </button> 
+ 
+        <p id="mensagem"></p> 
+ 
+    </form> 
+ 
+    <script> 
+ 
+        const cepUser = document.querySelector("#cep");
+
+        function buscarCep (){
+            fetch(`https://viacep.com.br/ws/${cepUser.value}/json`)
+            .then(function (response){
+                if (!response.ok) {
+                    throw new Error ("Cep nao encontrado");
+                }
+                console.log(response)
+                return response.json();
+            })
+            
+            .then(function(ceps) {
+                mensagem.textContent = "";
+
+              
+
+           } 
+        )
+        }
+
+ 
+ 
+    </script> 
+ 
+</body> 
+ 
+</html> 
+ 
